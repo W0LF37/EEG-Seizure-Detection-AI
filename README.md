@@ -60,3 +60,13 @@ Evaluation metrics:
 
 
 ## Project Structure
+notebooks/
+src/
+results/
+models/
+
+
+## Author
+
+Mhd Adnan Lahham
+Ahmad altabaa
