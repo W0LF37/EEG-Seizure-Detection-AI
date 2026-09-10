@@ -129,7 +129,7 @@ The model was evaluated on the test set using multiple classification metrics.
 
 ### Training Performance
 
-![Learning Curves](results/learning_curves.png)
+![Learning Curves](results/Learning curves.png)
 
 ---
 
