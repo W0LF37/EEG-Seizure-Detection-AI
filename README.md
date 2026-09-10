@@ -1,27 +1,28 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
+
 # EEG Seizure Detection using Deep Learning
 
 ![STFT Representation](results/stft_samples.png)
 
 ## Overview
 
-This project presents a deep learning approach for epileptic seizure classification using EEG (Electroencephalography) signals.
+This project presents a deep learning-based approach for EEG (Electroencephalography) signal classification and epileptic seizure pattern recognition.
 
-The proposed pipeline transforms raw EEG signals into time-frequency representations using Short-Time Fourier Transform (STFT), then applies a convolutional neural network based on EfficientNetB0 to classify different EEG signal categories.
+The proposed pipeline converts raw EEG signals into time-frequency spectrogram representations using Short-Time Fourier Transform (STFT), then utilizes an EfficientNetB0-based convolutional neural network for multi-class classification.
 
-The project explores the application of deep learning techniques in biomedical signal processing and healthcare AI.
+This project explores the application of deep learning techniques in biomedical signal processing and healthcare AI.
 
 ---
 
 ## Problem Statement
 
-Epileptic seizure detection from EEG signals is a challenging task due to the complexity and variability of brain activity patterns.
+EEG signals contain complex temporal patterns that can be challenging to analyze manually.
 
-Traditional EEG analysis requires expert interpretation, which motivates the use of automated deep learning approaches capable of extracting meaningful patterns from signal data.
+Automated deep learning approaches can help extract meaningful patterns from EEG data by learning representations directly from transformed signal data.
 
-This project investigates how signal transformation and deep learning models can support automated EEG classification.
+This project investigates the use of signal processing and deep learning methods for automated EEG classification.
 
 ---
 
@@ -45,14 +46,15 @@ Multi-Class Classification
 
 ### Signal Processing
 
-- Raw EEG signals are converted into time-frequency representations using Short-Time Fourier Transform (STFT).
-- Generated spectrograms are resized and prepared as image inputs for the deep learning model.
+- Raw EEG signals are transformed into time-frequency representations using Short-Time Fourier Transform (STFT).
+- Generated spectrograms are resized and converted into image-like inputs.
+- The processed representations are used as input for the deep learning model.
 
 ### Deep Learning Model
 
-The classification model is based on EfficientNetB0:
+The classification architecture is based on EfficientNetB0:
 
-- EfficientNetB0 feature extraction backbone
+- EfficientNetB0 convolutional feature extractor
 - Global Average Pooling layer
 - Fully connected classification layers
 - Softmax output layer for multi-class prediction
@@ -65,13 +67,11 @@ The classification model is based on EfficientNetB0:
 
 The dataset contains EEG signal samples categorized into five different classes.
 
-The signals are transformed into spectrogram representations before being used for model training.
+The raw EEG signals are transformed into spectrogram representations before training the classification model.
 
 ---
 
 ## Model Architecture
-
-The proposed architecture:
 
 ```
 EEG Signal
@@ -93,7 +93,7 @@ Softmax Classification
 
 - Python
 - TensorFlow / Keras
-- EfficientNet
+- EfficientNetB0
 - Librosa
 - OpenCV
 - Scikit-learn
@@ -104,13 +104,24 @@ Softmax Classification
 
 ## Results
 
-The model performance was evaluated using:
+The model was evaluated on the test set using multiple classification metrics.
 
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
+### Performance Summary
+
+- **Test Accuracy:** 79.04%
+- **Macro Precision:** 81.97%
+- **Macro Recall:** 79.04%
+- **Macro F1-score:** 77.52%
+
+### Classification Metrics
+
+| Class | Precision | Recall | F1-score |
+|------|-----------|--------|----------|
+| Class 0 | 0.9939 | 0.9522 | 0.9726 |
+| Class 1 | 0.7820 | 0.3014 | 0.4351 |
+| Class 2 | 0.5616 | 0.9116 | 0.6950 |
+| Class 3 | 0.9179 | 0.8913 | 0.9044 |
+| Class 4 | 0.8431 | 0.8957 | 0.8686 |
 
 ### Confusion Matrix
 
@@ -130,6 +141,7 @@ EEG-Seizure-Detection-AI/
 ├── EEG_Seizure_Detection.ipynb
 ├── README.md
 ├── requirements.txt
+├── LICENSE
 │
 └── results/
     ├── stft_samples.png
@@ -145,7 +157,8 @@ EEG-Seizure-Detection-AI/
 - Spectrogram-based deep learning classification
 - EfficientNetB0 implementation for biomedical signal analysis
 - Multi-class EEG pattern recognition
-- Visualization of model performance and predictions
+- Model evaluation using multiple classification metrics
+- Visualization of signal representations and model performance
 
 ---
 
@@ -153,21 +166,21 @@ EEG-Seizure-Detection-AI/
 
 Possible improvements include:
 
-- Using pretrained EfficientNet weights through transfer learning
-- Testing additional deep learning architectures
-- Applying data augmentation techniques
-- Evaluating on larger EEG datasets
-- Developing a real-time EEG monitoring pipeline
+- Applying transfer learning with pretrained EfficientNet weights
+- Exploring alternative deep learning architectures
+- Increasing dataset diversity
+- Applying advanced data augmentation techniques
+- Developing real-time EEG monitoring applications
 
 ---
 
 ## Project Context
 
-This project was developed as part of university coursework to explore deep learning applications in biomedical signal processing.
+This project was developed as part of university coursework to explore deep learning applications in biomedical signal processing and healthcare AI.
 
 ---
 
-## Author
+## Authors
 
 **Mhd Adnan Lahham**  
 **Ahmad Altabaa**
