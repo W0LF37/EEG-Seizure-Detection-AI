@@ -1,3 +1,6 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 # EEG Seizure Detection using Deep Learning
 
 ![STFT Representation](results/stft_samples.png)
